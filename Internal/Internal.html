@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+
+			Internal
+
+		</title>
+		<script charset="utf-8" type="text/javascript" src="crafty-min.js"></script>
+		<script src="lib/scenes.js"></script>
+		<script charset="utf-8" type="text/javascript" src="game.js"></script>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Overlock+SC"></link>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here"></link>
+		<style>
+
+
+					body, html {
+						font-family: Helvetica, Arial, sans-serif;
+						background-color:#444;
+						/*
+						background-image:-webkit-radial-gradient(center center, circle farthest-corner, #444 0%, #222 100%);
+						background-image:-moz-radial-gradient(center center, circle farthest-corner, #444 0%, #222 100%);
+						background-image:-o-radial-gradient(center center, circle farthest-corner, #444 0%, #222 100%);
+						background-image:radial-gradient(center center, circle farthest-corner, #444 0%, #222 100%);
+						*/
+						min-height:100%;
+						padding:1px 0 0 0;
+						margin:-1px 0 0 0;
+					}
+					html{
+						height:100%;
+					}
+					#cr-stage {
+						margin:0 auto;
+						font-family:"Overlock SC", Helvetica, Arial, sans-serif;
+						font-size:14px;
+						line-height:16px;
+						margin-top:30px;
+					}
+					#directions{
+						text-align:center;
+						margin-top:40px;
+						color:#888;
+						font-size:11px;
+						text-transform:uppercase;
+						letter-spacing:1px;
+					}
+					#directions p{
+						margin:.75em 0;
+					}
+					
+
+		</style>
+	</head>
+	<body>
+		<div id="cr-stage" style="width: 656px; height: 396px; overflow: hidden; position: relative;">
+			<div style="position: absolute; z-index: 1;">
+				<div id="ent210" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent211" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(16px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent212" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(32px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent213" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(48px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent214" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(64px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent215" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(80px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent216" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(96px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent217" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(112px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent218" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(128px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent219" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(144px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent220" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(160px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent221" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(176px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent222" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(192px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent223" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(208px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent224" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(224px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent225" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(240px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent226" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(256px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent227" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(272px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent228" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(288px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent229" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(304px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent230" class="2D DOM empty exit Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(320px, 80px, 0px); background: url("sprites.png") no-repeat scroll 0px 0px transparent;"></div>
+				<div id="ent231" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(336px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent232" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(352px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent233" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(368px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent234" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(384px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent235" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(400px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent236" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(416px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent237" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(432px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent238" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(448px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent239" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(464px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent240" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(480px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent241" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(496px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent242" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(512px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent243" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(528px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent244" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(544px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent245" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(560px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent246" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(576px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent247" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(592px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent248" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(608px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent249" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(624px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent250" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 80px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent251" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 96px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent252" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(304px, 96px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent253" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(336px, 96px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent254" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 96px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent255" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 112px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent256" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(304px, 112px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent257" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(336px, 112px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent258" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 112px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent259" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 128px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent260" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 128px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent261" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 144px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent262" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 144px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent263" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 160px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent264" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 160px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent265" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 176px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent266" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(304px, 176px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent267" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 176px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent268" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 192px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent269" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(336px, 192px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent270" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 192px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent271" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 208px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent272" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 208px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent273" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 224px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent274" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(288px, 224px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent275" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 224px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent276" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(0px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent277" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(16px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent278" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(32px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent279" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(48px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent280" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(64px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent281" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(80px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent282" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(96px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent283" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(112px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent284" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(128px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent285" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(144px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent286" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(160px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent287" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(176px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent288" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(192px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent289" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(208px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent290" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(224px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent291" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(240px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent292" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(256px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent293" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(272px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent294" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(288px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent295" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(304px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent296" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(320px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent297" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(336px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent298" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(352px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent299" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(368px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent300" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(384px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent301" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(400px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent302" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(416px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent303" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(432px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent304" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(448px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent305" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(464px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent306" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(480px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent307" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(496px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent308" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(512px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent309" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(528px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent310" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(544px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent311" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(560px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent312" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(576px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent313" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(592px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent314" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(608px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent315" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(624px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+				<div id="ent316" class="2D DOM wall Solid Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 0; opacity: 1; transform: translate3d(640px, 240px, 0px); background: url("sprites.png") no-repeat scroll -16px 0px transparent;"></div>
+			   
+				<div id="ent319" class="2D DOM player controls Collision SliderMovementControls Tween SpriteAnimation Sprite obj" style="position: absolute; visibility: visible; width: 16px; height: 16px; z-index: 1; opacity: 1; transform: translate3d(272px, 224px, 0px); background: url("sprites.png") no-repeat scroll -160px -16px transparent;"></div>
+			</div>
+		</div>
+		<div id="directions">
+			<p>
+				Game must be run in <b><u>FireFox</u></b> for smooth gameplay.
+			</P>
+			<p>
+
+				Arrow keys or WASD for movement.
+
+			</p>
+			<p>
+
+				R to restart the level.
+
+			</p>
+			<p>
+			You are a true master of the game if you can beat the game before the music turns off.
+			</p>
+		</div>
+		<script src="levels.js"></script>
+	</body>
+</html>
+
